@@ -26,14 +26,31 @@ function facebooklogin() {
         FB.login(function(response) {  
             var fbname;  
             var accessToken = response.authResponse.accessToken;  
-        }, {scope: 'publish_stream,user_likes'});  
+        }, {scope: 'publish_actions,user_likes'});  
 }  
 </script>  
 </head>  
   <body>
-      <h1>New page for liam</h1>
+    <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1085416961507014',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+      <h1>New page for liam 1</h1>
   
-      <script src="javascripts/script.js"></script>
+      
       <div onclick="facebooklogin()" style="cursor: pointer;">  
             <img src="FB.jpg">  
       </div>   
