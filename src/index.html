@@ -7,7 +7,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">  
 <title>Login page</title>  
 <script type="text/javascript" src="js/jquery-1.7.1.min.js" charset="utf-8"></script>  
-<script type="text/javascript">  
+<script type="text/javascript" src="javascripts/script.js"></script>
+<script type="text/javascript">
+
 //페이스북 SDK 초기화   
 window.fbAsyncInit = function() {  
     FB.init({appId: '1085416961507014', status: true, cookie: true,xfbml: true});      
@@ -28,15 +30,19 @@ function facebooklogin() {
             var accessToken = response.authResponse.accessToken;  
         }, {scope: 'publish_actions,user_likes'});  
 }  
-</script>  
+</script> 
 </head>  
   <body>
-    
-      <h1>New page for liam 1</h1>
+
+     
+      
+      <!--<button type="button" onclick="str()">click me!</button>
+      <p id="demo"> hi liam</p>
+      -->
   
       
-      <div onclick="facebooklogin()" style="cursor: pointer;">  
+      <!--<div onclick="facebooklogin()" style="cursor: pointer;">  
             <img src="FB.jpg">  
-      </div>   
+      </div>   -->
   </body>
 </html>
