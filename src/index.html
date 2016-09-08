@@ -26,7 +26,7 @@ function facebooklogin() {
         FB.login(function(response) {  
             var fbname;  
             var accessToken = response.authResponse.accessToken;  
-        }, {scope: 'publish_stream,user_likes'});  
+        }, {scope: 'publish_actions,user_likes'});  
 }  
 </script>  
 </head>  
@@ -48,7 +48,7 @@ function facebooklogin() {
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
-      <h1>New page for liam</h1>
+      <h1>New page for liam 1</h1>
   
       
       <div onclick="facebooklogin()" style="cursor: pointer;">  
