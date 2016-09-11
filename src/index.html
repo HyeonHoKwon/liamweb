@@ -27,7 +27,10 @@ function facebooklogin() {
     //페이스북 로그인 버튼을 눌렀을 때의 루틴.  
         FB.login(function(response) {  
             var fbname;  
-            var accessToken = response.authResponse.accessToken;  
+            var accessToken = response.authResponse.accessToken;
+            if (accessToken==true){
+                alert("already login")
+            }  
         }, {scope: 'publish_actions,user_likes'});  
 }  
 </script>
