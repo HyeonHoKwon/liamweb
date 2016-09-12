@@ -6,12 +6,13 @@
 <head>  
 <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">  
 <title>Liam page</title>  
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!--<script type="text/javascript" src="js/jquery-1.7.1.min.js" charset="utf-8"></script>  -->
 <script type="text/javascript" src="../javascripts/script.js"></script>
  
-<link type="text/css" rel="stylesheet" href="../css/bootstrap.css">
+
 <link type="text/css" rel="stylesheet" href="../css/main.css">
 <script type="text/javascript">
 
@@ -43,8 +44,6 @@ function facebooklogin() {
 </head>  
 <body>
 
-
-
   <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -66,45 +65,65 @@ function facebooklogin() {
         <li id="logButton"><a href="#"  onclick="facebooklogin()"> Facebook</a></li>
       </ul>
     </div>
+    
   </div>
 </nav>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox"  >
-      <div class="item active">
-        <img src="pictures/mission.jpg" style="height:550px"  >
-        <div class="carousel-caption">
-          <h1>this is Liam blog</h1>
-          <p>please enjoy my page</p>
-        </div>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
 
-      <div class="item">
-        <img src="pictures/roto.jpg" alt="Image" style="height:550px" >
-        <div class="carousel-caption">
-          <h3>More Sell $</h3>
-          <p>Lorem ipsum...</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="pictures/marine.jpg" alt="Image" style="height:550px"  >
-        <div class="carousel-caption">
-          <h3>More Sell $</h3>
-          <p>Lorem ipsum...</p>
-        </div>
-      </div>
-
-      
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>about me..</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a onclick="myfunction()" href="#history" >history</a></li>
+        <li><a onclick="document.getElementById('edu')" href="#">Education</a></li>
+        <li><a onclick="document.getElementById('contect')" href="#">contect</a></li>
+      </ul>
     </div>
 
-    
-    
+    <div class="col-sm-9">
+      
+      
+      <h2 id="h2js">Liam's history</h2>
+      <p id="pjs">Hello my name is HyeonHo Kwon and English name is Liam.</p><br>
+      <p id="p2js">I am from South Korea </p><br>
+      <p id="p3js">I was born in 1994 Feb 23th. </p><br>
+      <p id="p4js">I studyed IT in Pohang Jecheol Technical High School.</p><br>
+      <p id="p5js">Taking this opportunity, I decided to study IT in Yeungnam University and also in Ntec.</p><br>
+      <p id="p6js">After finish first year, I entered the Marine for fulfill my military service of 2 years. </p><br>
+      <p id="p7js">After finish that, i came to NZ by working holiday visa. </p><br>
+      <p id="p8js">that nz life change my life everything.</p><br>
+      <p id="p9js">NZ is amazing, beautiful country. that is reason why i'm living NZ now.</p><br>
+      
+      
+      
+      
+      <br><br>
+    </div>
+  </div>
 </div>
+
+
+
+</body>
+</html>
+
+
+
+
   
 
 
