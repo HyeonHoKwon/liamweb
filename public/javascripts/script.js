@@ -1,3 +1,4 @@
-// function str(){
-//     document.getElementById("demo").innerHTML = "liam is here";
-// }
+function logOut() {
+    localStorage.clear();
+    $('#logButton').html('<a href="#"  onclick="facebooklogin()"> Facebook</a>');
+}

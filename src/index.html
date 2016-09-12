@@ -24,13 +24,17 @@ window.fbAsyncInit = function() {
    js.src = "//connect.facebook.net/en_US/all.js";  
    ref.parentNode.insertBefore(js, ref);  
  }(document));     
-              
+
+         function change(){
+             
+         }     
 function facebooklogin() {  
     //페이스북 로그인 버튼을 눌렀을 때의 루틴.  
         FB.login(function(response) {  
             var fbname;  
             var accessToken = response.authResponse.accessToken;
             localStorage.setItem('token', accessToken);
+            $('#logButton').html('<a href="#" onclick="logOut()" >Log Out</a>');
             
         }, {scope: 'publish_actions,user_likes'});  
 }  
@@ -58,8 +62,7 @@ function facebooklogin() {
         <li><a href="#">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
-        <li><a href="#" onclick="facebooklogin()"> Facebook</a></li>
+        <li id="logButton"><a href="#"  onclick="facebooklogin()"> Facebook</a></li>
       </ul>
     </div>
   </div>
