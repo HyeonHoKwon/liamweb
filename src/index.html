@@ -1,12 +1,14 @@
 
 <!DOCTYPE html>
 <html>
-  <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">  
+  <!DOCTYPE html PUBLIC >  
   
 <head>  
 <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">  
 <title>Login page</title>  
-<script type="text/javascript" src="js/jquery-1.7.1.min.js" charset="utf-8"></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--<script type="text/javascript" src="js/jquery-1.7.1.min.js" charset="utf-8"></script>  -->
 <script type="text/javascript" src="javascripts/script.js"></script>
  <script type="text/javascript">
 
@@ -28,11 +30,13 @@ function facebooklogin() {
         FB.login(function(response) {  
             var fbname;  
             var accessToken = response.authResponse.accessToken;
+            localStorage.setItem('token', accessToken);
             
         }, {scope: 'publish_actions,user_likes'});  
 }  
 </script>
 <link rel="stylesheet" href="css/main.css">
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
 
 </head>  
   <body>
@@ -48,14 +52,14 @@ function facebooklogin() {
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
+        <li class="active"><a href="/index.html">Home</a></li>
+        <li><a href="/html/liam.html">Liam</a></li>
         <li><a href="#">Projects</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
-        <li><a href="#" onclick="facebooklogin()"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="#" onclick="facebooklogin()"> Facebook</a></li>
       </ul>
     </div>
   </div>
@@ -66,32 +70,44 @@ function facebooklogin() {
     
 
     <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
+    <div class="carousel-inner" role="listbox"  >
       <div class="item active">
-        <img src="http://placehold.it/1200x400?text=IMAGE" alt="Image">
+        <img src="pictures/mission.jpg" style="height:550px"  >
         <div class="carousel-caption">
-          <h3>Sell $</h3>
-          <p>Money Money.</p>
+          <h1>this is Liam blog</h1>
+          <p>please enjoy my page</p>
         </div>
       </div>
 
       <div class="item">
-        <img src="http://placehold.it/1200x400?text=Another Image Maybe" alt="Image">
+        <img src="pictures/roto.jpg" alt="Image" style="height:550px" >
         <div class="carousel-caption">
           <h3>More Sell $</h3>
           <p>Lorem ipsum...</p>
         </div>
       </div>
+
+      <div class="item">
+        <img src="pictures/marine.jpg" alt="Image" style="height:550px"  >
+        <div class="carousel-caption">
+          <h3>More Sell $</h3>
+          <p>Lorem ipsum...</p>
+        </div>
+      </div>
+
+      
     </div>
 
-    <!-- Left and right controls -->
+    
     
 </div>
   
 
 
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
+<footer class="container-fluid">
+  <p>HyeonHo Kwon</p>
+  <p>tel:<span style="padding-left:25px"> 02102684120</p>
+  <p>e-mail: tiz00002fw@myntec.ac.nz</p>
 </footer>
      
       

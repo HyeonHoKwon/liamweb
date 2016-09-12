@@ -1,42 +1,18 @@
 
 <!DOCTYPE html>
 <html>
-  <!DOCTYPE html PUBLIC >  
+  <!DOCTYPE html PUBLIC>  
   
 <head>  
 <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">  
-<title>Login page</title>  
+<title>Liam page</title>  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!--<script type="text/javascript" src="js/jquery-1.7.1.min.js" charset="utf-8"></script>  -->
 <script type="text/javascript" src="javascripts/script.js"></script>
- <script type="text/javascript">
-
-//페이스북 SDK 초기화   
-window.fbAsyncInit = function() {  
-    FB.init({appId: '1085416961507014', status: true, cookie: true,xfbml: true});      
-};  
-      
-(function(d){  
-   var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];  
-   if (d.getElementById(id)) {return;}  
-   js = d.createElement('script'); js.id = id; js.async = true;  
-   js.src = "//connect.facebook.net/en_US/all.js";  
-   ref.parentNode.insertBefore(js, ref);  
- }(document));     
-              
-function facebooklogin() {  
-    //페이스북 로그인 버튼을 눌렀을 때의 루틴.  
-        FB.login(function(response) {  
-            var fbname;  
-            var accessToken = response.authResponse.accessToken;
-            localStorage.setItem('token', accessToken);
-            
-        }, {scope: 'publish_actions,user_likes'});  
-}  
-</script>
-<link rel="stylesheet" href="css/main.css">
-<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+ 
+<link type="text/css" rel="stylesheet" href="../css/bootstrap.css">
+<link type="text/css" rel="stylesheet" href="../css/main.css">
 
 </head>  
   <body>
@@ -52,15 +28,12 @@ function facebooklogin() {
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/index.html">Home</a></li>
+        <li class="active"><a href="../index.html">Home</a></li>
         <li><a href="/html/liam.html">Liam</a></li>
         <li><a href="#">Projects</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        
-        <li><a href="#" onclick="facebooklogin()"> Facebook</a></li>
-      </ul>
+      
     </div>
   </div>
 </nav>
