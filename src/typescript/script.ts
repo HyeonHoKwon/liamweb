@@ -13,7 +13,7 @@ function myfunction(){
     document.getElementById("p5js").innerHTML = "Taking this opportunity, I decided to study IT in Yeungnam University and also in Ntec.";
     document.getElementById("p6js").innerHTML = "After finish first year, I entered the Marine for fulfill my military service of 2 years.";
     document.getElementById("p7js").innerHTML = "After finish that, i came to NZ by working holiday visa.";
-    document.getElementById("p8js").innerHTML = "that nz life change my life everything.";
+    document.getElementById("p8js").innerHTML = "NZ life changes my life everything.";
     document.getElementById("p9js").innerHTML = "NZ is amazing, beautiful country. that is reason why i'm living NZ now.";
 }
 function myfunction1(){
