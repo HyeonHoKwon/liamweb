@@ -13,3 +13,9 @@ body{
 .open:hover .onopen{
     display: block;
 }
+
+.hover{
+    display: block;
+    /*color: red;
+    background: red;*/
+}
