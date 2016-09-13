@@ -1,17 +1,22 @@
+
 <!DOCTYPE html>
 <html>
-  <!DOCTYPE html PUBLIC >  
+  <!DOCTYPE html PUBLIC>  
   
 <head>  
 <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">  
-<title>Liam's blog</title>  
+<title>contact</title>  
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!--<script type="text/javascript" src="js/jquery-1.7.1.min.js" charset="utf-8"></script>  -->
-<script type="text/javascript" src="javascripts/script.js"></script>
- <script type="text/javascript">
+<script type="text/javascript" src="../javascripts/script.js"></script>
+ 
 
-   
+<link type="text/css" rel="stylesheet" href="../css/main.css">
+<script type="text/javascript">
+
+//페이스북 SDK 초기화   
 window.fbAsyncInit = function() {  
     FB.init({appId: '1085416961507014', status: true, cookie: true,xfbml: true});      
 };  
@@ -26,7 +31,7 @@ window.fbAsyncInit = function() {
 
            
 function facebooklogin() {  
-      
+    //페이스북 로그인 버튼을 눌렀을 때의 루틴.  
         FB.login(function(response) {  
             var fbname;  
             var accessToken = response.authResponse.accessToken;
@@ -36,11 +41,9 @@ function facebooklogin() {
         }, {scope: 'publish_actions,user_likes'});  
 }  
 </script>
-<link rel="stylesheet" href="css/main.css">
-<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
-
 </head>  
-  <body>
+<body>
+
   <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -49,64 +52,23 @@ function facebooklogin() {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" >blog</a>
+      <a class="navbar-brand">blog</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/index.html">Home</a></li>
+        <li ><a href="../index.html">Home</a></li>
         <li><a href="/html/liam.html">Liam</a></li>
         <li><a href="/html/BJJ.html">BJJ</a></li>
         <li><a href="/html/contact.html">contact</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right">
         <li id="logButton"><a href="#"  onclick="facebooklogin()"> Facebook</a></li>
       </ul>
     </div>
+    
   </div>
 </nav>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox"  >
-      <div class="item active">
-        <img src="pictures/mission.jpg" style="height:550px"  >
-        <div class="carousel-caption">
-          <h1>this is Liam blog</h1>
-          <p>please enjoy my page</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="pictures/roto.jpg" alt="Image" style="height:550px" >
-        <div class="carousel-caption">
-          <h1>this is Liam blog</h1>
-          <p>please enjoy my page</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="pictures/marine.jpg" alt="Image" style="height:550px"  >
-        <div class="carousel-caption">
-          <h1>this is Liam blog</h1>
-          <p>please enjoy my page</p>
-        </div>
-      </div>
-
-      
-    </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-       <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="sr-only">Next</span>
-    </a>
-    
-    
-</div>
-  
 
 
 <footer class="container-fluid" style="background-color:#101010;">
@@ -115,24 +77,6 @@ function facebooklogin() {
   <p style="color:#cccccc">e-mail: tiz00002fw@myntec.ac.nz</p>
 </footer>
 
-<!--<div class="open">
-  <a> Open picture</a>
-  <div class="onopen">
-    <img src="pictures/marine.jpg" alt="Image" style="height:550px"  >
-  </div>
-</div>-->
-     
-      
-      <!--<button type="button" onclick="str()">click me!</button>
-      <p id="demo"> hi liam</p>
-      -->
-  
-      
-      <!--<div onclick="facebooklogin()" style="cursor: pointer;">  
-            <img src="pictures/fb.jpg">  
-      </div>  -->
-      <script type="text/javascript" src="javascripts/afterLoad.js"></script>
-         
-       
+<script type="text/javascript" src="../javascripts/afterLoad.js"></script>
   </body>
 </html>
