@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var del = require('del');
 var gulpTypescript = require('gulp-typescript');
+var uglify = require('gulp-uglify');
 
 var tsconfig = gulpTypescript.createProject('tsconfig.json');
 
@@ -11,6 +12,7 @@ gulp.task('cleaning' , function(){
 gulp.task('build-ts', function() {
     return gulp.src('src/typescript/**/*.ts')
         .pipe(gulpTypescript(tsconfig))
+        .pipe(uglify())
         .pipe(gulp.dest('public/javascripts/'));
 });
 

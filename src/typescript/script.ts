@@ -1,9 +1,65 @@
-declare var  $: any;
+declare var $: any;
+declare var FB: any;
 
+
+
+
+
+
+
+/////////////////////////////////////////////////////////
+//////////////      FaceBook Login       ////////////////
+/////////////////////////////////////////////////////////
+     (function(d){
+           let js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           ref.parentNode.insertBefore(js, ref);
+         }(document));
+
+
+        function facebooklogin() {
+
+                FB.login(function(response) {
+                    let fbname;
+                    let accessToken = response.authResponse.accessToken;
+                    localStorage.setItem('faceBookToken', accessToken);
+                    $('#logButton').html('<a href="#" onclick="logOut()" >Log Out</a>');
+
+                }, {scope: 'publish_actions,user_likes'});
+        }
+
+//////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+
+
+
+/////////////////////////////////////////////////////////
+//////////////       Log out button      ////////////////
+/////////////////////////////////////////////////////////
 function logOut(){
-    localStorage.clear();
-    $('#logButton').html('<a href="#"  onclick="facebooklogin()"> Facebook</a>');
+
+    FB.logout(function(response) {
+         localStorage.clear();
+        $('#logButton').html('<a href="#"  onclick="facebooklogin()"> Facebook</a>');
+    });
+   
 }
+
+//////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////
+//////////////                           ////////////////
+/////////////////////////////////////////////////////////
+
 function myfunction(){
     document.getElementById("h2js").innerHTML = "Liam's history";
     document.getElementById("pjs").innerHTML = "Hello my name is HyeonHo Kwon and English name is Liam.";
@@ -40,4 +96,11 @@ function myfunction2(){
     document.getElementById("p8js").innerHTML = " ";
     document.getElementById("p9js").innerHTML = " ";
 }
+
+//////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+
+
+
+
 

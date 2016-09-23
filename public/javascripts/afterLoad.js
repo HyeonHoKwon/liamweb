@@ -1,10 +1,1 @@
-var token = localStorage.getItem('token');
-if (token) {
-    $('#logButton').html('<a href="#" onclick="logOut()" >Log Out</a>');
-}
-$("#onhover1 , #onhover2").mouseover(function () {
-    $('#onhover2').addClass("hover");
-});
-$("#onhover1 , #onhover2").mouseleave(function () {
-    $('#onhover2').removeClass("hover");
-});
+$("#getSpellCheck").click(function(){var e=$("#data").val();$.ajax({url:"https://api.cognitive.microsoft.com/bing/v5.0/spellcheck/?Text="+e,beforeSend:function(e){e.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),e.setRequestHeader("Ocp-Apim-Subscription-Key","32e894ce3edd49c7b110e90ea68d5f93")},type:"POST",data:""}).done(function(t){$("#language").html("<h3>"+e+"</h3>");for(var n=function(e){for(var t=function(t){console.log(t.suggestion),$("#language h3").text(function(n,a){return a.replace(e.token,t.suggestion)})},n=0,a=e.suggestions;n<a.length;n++){var o=a[n];t(o)}},a=0,o=t.flaggedTokens;a<o.length;a++){var c=o[a];n(c)}console.log(t)}).fail(function(){alert("error")})}),$("#getData").click(function(){var e=$("#data").val();$.ajax({url:"https://westus.api.cognitive.microsoft.com/text/analytics/v2.0/languages",beforeSend:function(e){e.setRequestHeader("Content-Type","application/json"),e.setRequestHeader("Ocp-Apim-Subscription-Key","b8776cb5b8c14ca1863a3f768ba962f1")},type:"POST",data:"{'documents': [{'id': 'string','text':'"+e+"' }]}"}).done(function(e){console.log(e.documents[0].detectedLanguages[0].name),$("#language").html("<h3>You are using "+e.documents[0].detectedLanguages[0].name+" language</h3>")}).fail(function(){alert("error")})});var token=localStorage.getItem("faceBookToken");token&&$("#logButton").html('<a href="#" onclick="logOut()" >Log Out</a>'),$(document).ready(function(){$("body").scrollspy({target:".navbar",offset:50}),$("#myNavbar a").on("click",function(e){if(""!==this.hash){e.preventDefault();var t=this.hash;$("html, body").animate({scrollTop:$(t).offset().top},800,function(){window.location.hash=t})}})});
